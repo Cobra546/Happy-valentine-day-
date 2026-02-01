@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff4d6d,#ff9aa2);
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.container{
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    max-width:350px;
+    width:90%;
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+button{
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.yes{
+    background:#fff;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.no{
+    background:#222;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.noScreen{
+    display:none;
+}
+
+.gif{
+    width:100%;
+    max-width:260px;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+.tryAgain{
+    margin-top:10px;
+    background:white;
+    color:#ff4d6d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="mainBox">
+
+    <div id="questionBox">
+        <h1>Will you be my Valentine? 💖</h1>
+
+        <div class="buttons">
+            <button class="yes" onclick="goYes()">YES 💘</button>
+            <button class="no" onclick="showNo()">NO 😭</button>
+        </div>
+    </div>
+
+    <div class="noScreen" id="noBox">
+        <h1>Jao us hi ke paas jissy pyaar kartay ho 😏💔</h1>
+        <img src="InShot_20260201_070929918.gif" class="gif">
+        <button class="tryAgain" onclick="restart()">Try Again 🔄</button>
+    </div>
+
+</div>
+
+<script>
+function showNo(){
+    document.getElementById("questionBox").style.display="none";
+    document.getElementById("noBox").style.display="block";
+}
+
+function restart(){
+    location.reload();
+}
+
+function goYes(){
+    window.location.href="yes.html";
+}
+</script>
+
+</body>
+</html>
