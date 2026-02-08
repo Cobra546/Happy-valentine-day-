@@ -90,8 +90,9 @@ button:hover{
 
 <div class="container" id="mainBox">
 
+    <!-- Question Box -->
     <div id="questionBox">
-        <h1>Will you be my Valentine? 💖</h1>
+        <h1>Do you Love me🥺🥺? 💖</h1>
 
         <div class="buttons">
             <button class="yes" onclick="goYes()">YES 💘</button>
@@ -99,6 +100,7 @@ button:hover{
         </div>
     </div>
 
+    <!-- No Box -->
     <div class="noScreen" id="noBox">
         <h1>Jao us hi ke paas jissy pyaar karti hain baat nhi kari ga ab mujh sy😏💔</h1>
         <img src="InShot_20260201_070929918.gif" class="gif">
@@ -117,7 +119,21 @@ function restart(){
     location.reload();
 }
 
+// YES button - show video first
 function goYes(){
+    document.getElementById("mainBox").innerHTML = `
+        <div style="text-align:center;color:#ff4d6d;">
+            <h1 style="font-size:2rem;margin-bottom:15px;">Hahahaha I loveee yohhhh mera bachww 😘🥰</h1>
+            <video autoplay muted loop style="width:100%;max-width:300px;border-radius:15px;margin-bottom:15px;">
+                <source src="InShot_20260208_222506287.mp4" type="video/mp4">
+            </video>
+            <button onclick="goNext()" style="padding:10px 20px;font-size:1.1rem;border-radius:25px;border:none;background:white;color:#ff4d6d;cursor:pointer;">Next ➡️</button>
+        </div>
+    `;
+}
+
+// Next button redirects to page 2
+function goNext(){
     window.location.href="https://cobra546.github.io/Happy-valentine-day-page2/";
 }
 </script>
